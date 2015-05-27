@@ -1,0 +1,43 @@
+// var definitions
+
+
+// media query break points
+$tablet-width: 768px;
+$phone-width: 420px;
+
+
+// colors
+$primary-clr:       #D32638;
+$scnd-clr:          #9F98B0;
+$primary-grey:      #D5D5D5;
+$dark-elem:         #010101;
+$bright-clr:        #E4E4E4;
+
+
+// mixins
+@mixin tablet {
+    @media (min-width: #{$phone-width + 1px}) and (max-width: #{$tablet-width}) {
+        @content;
+    }
+}
+
+@mixin phone {
+    @media (max-width: #{$phone-width}) {
+        @content;
+    }
+}
+
+@mixin tablet-phone {
+    @media (max-width: #{$tablet-width}) {
+        @content;
+    }
+}
+
+// import compass-mixins to use compass with libsass
+@import "../bower_components/compass-mixins/lib/compass";
+@import "../bower_components/_normalize.scss/normalize";
+
+// import stylesheets
+@import "typography";
+@import "tables";
+
