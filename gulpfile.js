@@ -7,7 +7,11 @@ var minifyCSS = require('gulp-minify-css');
 var sourcemaps = require('gulp-sourcemaps');
 var sass = require('gulp-sass');
 var plumber = require('gulp-plumber');
+var rename = require("gulp-rename");
+
 // var browsersync = require('browser-sync');
+
+
 
 
 // Error Helper
@@ -44,6 +48,18 @@ gulp.task('concat', function() {
         .pipe(notify({ message: 'Concatenate task completed' }));
 });
 
+
+// css min compiling task
+gulp.task('css-min', function() {
+    return gulp.src('css/main.css')
+        .pipe(plumber({
+            errorHandler: onError
+        }))
+        .pipe(rename({suffix: '.min'}))
+        .pipe(minifyCSS())
+        .pipe(gulp.dest('css/dist'))
+        .pipe(notify({ message: 'Sass Min task completed' }));
+});
 
 // watch task
 gulp.task('watch', function() {
