@@ -1,0 +1,25 @@
+{
+  "name": "JonasScheiwiller.ch",
+  "version": "0.0.0",
+  "description": "website jonas scheiwiller",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://Jones-S@github.com/Jones-S/jonasscheiwiller-ch.git"
+  },
+  "keywords": [
+    "website"
+  ],
+  "author": {
+    "name" : "Jonas Scheiwiller",
+    "email" : "me@jonasscheiwiller.ch"
+  },
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Jones-S/jonasscheiwiller-ch/issues"
+  },
+  "homepage": "https://github.com/Jones-S/jonasscheiwiller-ch"
+}
