@@ -68,3 +68,10 @@ p {
 .title-underlined {
     text-decoration: underline;
 }
+
+.no-underline {
+    border-bottom: none;
+    &:hover {
+        border-bottom: none;
+    }
+}

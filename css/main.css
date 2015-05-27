@@ -406,6 +406,11 @@ p {
 .title-underlined {
   text-decoration: underline; }
 
+.no-underline {
+  border-bottom: none; }
+  .no-underline:hover {
+    border-bottom: none; }
+
 table {
   border-collapse: separate;
   border-spacing: 0; }
