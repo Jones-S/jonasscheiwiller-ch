@@ -1,4 +1,5 @@
 // var definitions
+$font-size: 62.5%;
 
 
 // media query break points
@@ -7,11 +8,8 @@ $phone-width: 420px;
 
 
 // colors
-$primary-clr:       #D32638;
-$scnd-clr:          #9F98B0;
-$primary-grey:      #D5D5D5;
-$dark-elem:         #010101;
-$bright-clr:        #E4E4E4;
+$hover-clr:         #c7d9df;
+$select-clr:        #ff9900;
 
 
 // mixins
@@ -33,6 +31,18 @@ $bright-clr:        #E4E4E4;
     }
 }
 
+// rem font size mixin
+// @include font-size(14) -> 14px; when html { font-size 62.5% (base 10) }
+@mixin font-size($sizeValue: 1.6) {
+    font-size: ($sizeValue) + px;
+    font-size: $sizeValue / 10 + rem;
+}
+
+
+
+
+
+
 // import compass-mixins to use compass with libsass
 @import "../bower_components/compass-mixins/lib/compass";
 @import "../bower_components/_normalize.scss/normalize";
@@ -40,4 +50,5 @@ $bright-clr:        #E4E4E4;
 // import stylesheets
 @import "typography";
 @import "tables";
+@import "general";
 

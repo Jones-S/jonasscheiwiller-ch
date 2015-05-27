@@ -1,32 +1,70 @@
-h1, h2, h3, h4, h5 {
-    font-family: sans-serif
+html, body {
+    font-family: "proxima-nova", "HelveticaNeue", "Helvetica Neue", Helvetica Neue, Helvetica, Arial, "Lucida Grande", sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: $font-size; // Sets up the Base 10 stuff
+    // activate kerning
+    font-feature-settings: "kern";
+    // activate ligatures
+    font-feature-settings: "liga";
+    // does both (kern/liga) together:
+    text-rendering: optimizeLegibility;
+    // hyphenation
+    hyphens: auto;
+    color: #fff;
+}
+
+h1, h2, h3, h4, h5, p, span, a {
+    font-weight: 400;
+    // offset-x | offset-y | blur-radius | color
+    text-shadow: 0 0 3rem #677677;
+    // define text shadow with rgba to get transparency
+    text-shadow: 0 0 3rem rgba(#1C2021, 0.7);
+    &::selection {
+        background: $select-clr; /* WebKit/Blink Browsers */
+    }
+    &::-moz-selection {
+        background: $select-clr; /* Gecko Browsers */
+    }
 }
 
 h1 {
-    font-size: 45px;
-    line-height: 58px;
-    color: $primary-clr;
+    @include font-size(50);
+    // @include font-size(45);
+    // line-height: 58px;
 
     @include tablet {
-        font-size: 40px;
-        line-height: 49px
+        @include font-size(37);
     }
     @include phone {
-        // rules
+        @include font-size(30);
     }
 }
 
-h2 {
-    font-size: 26px;
-    line-height: 32px
+
+h3 {
+    @include font-size(20);
 }
 
 a {
+    color: #fff;
+    text-decoration: none;
+    border-bottom: 0.1em #fff solid;
     &:hover {
+        color: $hover-clr;
+        border-bottom: 0.1em $hover-clr solid;
     }
 }
 
 p {
-    font-size: 16px;
+    @include font-size(16);
     line-height: 24px
+}
+
+.title-bold {
+    font-weight: 700;
+}
+
+.title-underlined {
+    text-decoration: underline;
 }
