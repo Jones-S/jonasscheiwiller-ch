@@ -1,0 +1,23 @@
+{
+  "name": "JonasScheiwiller.ch",
+  "version": "0.0.0",
+  "homepage": "http://www.jonasscheiwiller.ch",
+  "authors": [
+    "Jones <jonas.scheiwiller@zhdk.ch>"
+  ],
+  "description": "website",
+  "main": "\"dist/**\"",
+  "keywords": [
+    "website",
+    "jonas",
+    "scheiwiller"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
