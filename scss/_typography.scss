@@ -75,3 +75,7 @@ p {
         border-bottom: none;
     }
 }
+
+.bigger-paragraph {
+    @include font-size(20);
+}
